@@ -1,0 +1,19 @@
+{
+  "name": "kube-service-mesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main-service": "node app/app-main.js",
+    "service-1": "node app/app-service-1.js",
+    "service-2": "node app/app-service-2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
