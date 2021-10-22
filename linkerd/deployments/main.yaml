@@ -1,3 +1,10 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kube-service-mesh-main
+  namespace: kube-service-mesh-linkerd
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +24,7 @@ spec:
       labels:
         app: kube-service-mesh-main
     spec:
+      serviceAccountName: kube-service-mesh-main
       containers:
         - name: kube-service-mesh-main
           image: narayananramu/kube-service-mesh-main-service
