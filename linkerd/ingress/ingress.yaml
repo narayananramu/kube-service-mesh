@@ -11,7 +11,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /*
             backend:
               serviceName: kube-service-mesh-main-service
               servicePort: 3000
