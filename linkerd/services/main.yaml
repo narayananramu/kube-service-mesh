@@ -3,11 +3,16 @@ kind: Service
 metadata:
   name: kube-service-mesh-main-service
   namespace: kube-service-mesh-linkerd
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+    alb.ingress.kubernetes.io/healthcheck-path: /
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '300'
+    alb.ingress.kubernetes.io/success-codes: 200,201
 spec:
   selector:
     app: kube-service-mesh-main
   type: NodePort
   ports:
-  - name: service
-    port: 3000
-    targetPort: 3000
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
