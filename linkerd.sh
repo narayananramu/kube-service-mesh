@@ -12,5 +12,6 @@ kubectl apply -f linkerd/services/service-1.yaml
 kubectl apply -f linkerd/services/service-2.yaml
 
 # create network policies
+kubectl apply -f linkerd/networkPolicies/deny-all.yaml
 kubectl apply -f linkerd/networkPolicies/service-1.yaml
 kubectl apply -f linkerd/networkPolicies/service-2.yaml
