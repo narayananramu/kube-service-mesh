@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kube-service-mesh-linkerd
+  namespace: kube-service-mesh-linkerd
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/subnets: ""
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: kube-service-mesh-main-service
+              servicePort: 3000
