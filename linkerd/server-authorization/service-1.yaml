@@ -1,0 +1,14 @@
+apiVersion: policy.linkerd.io/v1beta1
+kind: ServerAuthorization
+metadata:
+  name: service-1-server-authorization
+  namespace: kube-service-mesh-linkerd
+  labels:
+    app: kube-service-mesh-service-1
+spec:
+  server:
+    name: service-1-server
+  client:
+    meshTLS:
+      serviceAccounts:
+        - name: kube-service-mesh-main

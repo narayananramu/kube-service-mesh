@@ -1,0 +1,13 @@
+apiVersion: policy.linkerd.io/v1beta1
+kind: Server
+metadata:
+  name: service-1-server
+  namespace: kube-service-mesh-linkerd
+  labels:
+    app: kube-service-mesh-service-1
+spec:
+  podSelector:
+    matchLabels:
+      app: kube-service-mesh-service-1
+  port: 3000
+  proxyProtocol: TCP
