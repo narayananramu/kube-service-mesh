@@ -10,4 +10,4 @@ spec:
     matchLabels:
       app: kube-service-mesh-service-2
   port: 3000
-  proxyProtocol: TCP
+  proxyProtocol: HTTP/1
