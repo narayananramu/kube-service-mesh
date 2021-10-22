@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-service-mesh-main-deployment
+  namespace: kube-service-mesh-linkerd
+  labels:
+    app: kube-service-mesh-main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-service-mesh-main
+  template:
+    metadata:
+      labels:
+        app: kube-service-mesh-main
+    spec:
+      containers:
+        - name: kube-service-mesh-main
+          image: narayananramu/kube-service-mesh-main-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
