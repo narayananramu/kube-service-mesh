@@ -10,3 +10,4 @@ spec:
   ports:
   - name: service
     port: 3000
+    targetPort: 3000
