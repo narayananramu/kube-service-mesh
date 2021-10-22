@@ -19,6 +19,8 @@ spec:
       app: kube-service-mesh-service-2
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       labels:
         app: kube-service-mesh-service-2
     spec:
