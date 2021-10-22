@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: kube-service-mesh-main
-  type: ClusterIP
+  type: NodePort
   ports:
   - name: service
     port: 3000
