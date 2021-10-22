@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: service-2-network-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: kube-service-mesh-service-2
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: kube-service-mesh-service-1
+    ports:
+    - protocol: TCP
+      port: 3000
