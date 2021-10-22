@@ -2,8 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kube-service-mesh-service-1-service
-  labels:
-    app: kube-service-mesh-service-1
+  namespace: kube-service-mesh-linkerd
 spec:
   selector:
     app: kube-service-mesh-service-1
