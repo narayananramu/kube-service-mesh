@@ -8,9 +8,9 @@ Main accepts traffic from the internet through ingress, whereas Service 1 and Se
 
 The microservices are simple single file express applications and their docker images are below.
 
-- [Main](https://hub.docker.com/repository/docker/narayananramu/kube-service-mesh-main-service)
-- [Service 1](https://hub.docker.com/repository/docker/narayananramu/kube-service-mesh-service-1)
-- [Service 2](https://hub.docker.com/repository/docker/narayananramu/kube-service-mesh-service-2)
+- [Main](https://hub.docker.com/r/narayananramu/kube-service-mesh-main-service)
+- [Service 1](https://hub.docker.com/r/narayananramu/kube-service-mesh-service-1)
+- [Service 2](https://hub.docker.com/r/narayananramu/kube-service-mesh-service-2)
 
 ## Linkerd
 
