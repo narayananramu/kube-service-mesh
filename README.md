@@ -30,3 +30,10 @@ To clean up the microservices and their configurations.
 ## Ingress
 
 The ingress template used in this project is AWS ALB for [more info](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.3/). You may be required to configure your ingress accordingly to run the project.
+
+## Test mTLS
+
+To test mTLS setup.
+```shell
+linkerd viz tap ns/kube-service-mesh-linkerd
+```
